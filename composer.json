@@ -1,0 +1,6 @@
+{
+    "name": "damir/php-project1",
+    "description": "My first php project",
+    "require": {},
+    "bin": "bin/brain-games"
+}
