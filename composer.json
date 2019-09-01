@@ -25,13 +25,15 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "autoload": {
         "files": [
             "src/Game.php",
             "src/games/Even.php",
-            "src/games/Calc.php"
+            "src/games/Calc.php",
+            "src/games/Gcd.php"
         ]
     }
 }
