@@ -11,30 +11,31 @@ const MAX_VALUE = 100;
 const MIN_STEP = 1;
 const MAX_STEP = 10;
 
-function makeProgressive()
-{
-    $begin = rand(MIN_VALUE, MAX_VALUE);
-    $step = rand(MIN_STEP, MAX_STEP);
-    $progressive = [];
-
-    for ($i = 1; $i <= LENGTH_PROGRESSION; $i++) {
-        $progressive[] = $begin + $step * $i;
-    }
-    
-    return $progressive;
-}
-
 function run()
 {
     $generateData = function () {
-        $progression = makeProgressive();
-        $missNumber = $progression[array_rand($progression)];
-        $progression = str_replace($missNumber, '...', $progression);
+        $begin = rand(MIN_VALUE, MAX_VALUE);
+        $step = rand(MIN_STEP, MAX_STEP);
+        $progression = makeProgression($begin, $step, LENGTH_PROGRESSION);
+        $missingItemIndex = $progression[array_rand($progression)];
+        $progression = str_replace($missingItemIndex, '...', $progression);
         $question = implode(' ', $progression);
-        $expectedAnswer = (string) $missNumber;
+        $expectedAnswer = (string) $missingItemIndex;
 
         return [$question, $expectedAnswer];
     };
 
     runGame(DESCRIPTION, $generateData);
+}
+
+function makeProgression($begin, $step, $lengthProgression)
+{
+    $result = [];
+    $firstElement = $begin;
+    for ($i = 1; $i <= $lengthProgression; $i++) {
+        $result[] = $firstElement;
+        $firstElement += $step;
+    }
+    
+    return $result;
 }

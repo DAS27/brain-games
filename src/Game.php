@@ -21,7 +21,7 @@ function runGame($description, $getDataGame)
         if ($userAsnwer === $expectedAnswer) {
             line('Correct!');
         } else {
-            line("{$userAsnwer} is wrong answer ;( Correct answer was {$expectedAnswer}");
+            line("{$userAsnwer} is wrong answer ;(. Correct answer was {$expectedAnswer}");
             line("Let's try again, %s!", $userName);
             return;
         }

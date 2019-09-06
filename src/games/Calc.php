@@ -17,21 +17,21 @@ function run()
         $operator = OPERATORS[array_rand(OPERATORS)];
 
         $question = "$number1 $operator $number2";
-        $expectedAnswer = 0;
+        $rightAnswer = null;
 
         switch ($operator) {
             case '+':
-                $expectedAnswer = (string) ($number1 + $number2);
+                $rightAnswer = $number1 + $number2;
                 break;
             case '-':
-                $expectedAnswer = (string) ($number1 - $number2);
+                $rightAnswer = $number1 - $number2;
                 break;
             case '*':
-                $expectedAnswer = (string) ($number1 * $number2);
+                $rightAnswer = $number1 * $number2;
                 break;
         }
 
-        return [$question, $expectedAnswer];
+        return [$question, (string) $rightAnswer];
     };
 
     runGame(DESCRIPTION, $generateData);
