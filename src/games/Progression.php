@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Game\runGame;
 
-const DESCRIPTION = 'What number is missing in the progression?';
+const DESCRIPTION = 'What number is missing in the progression?.';
 const LENGTH_PROGRESSION = 10;
 const MIN_VALUE = 0;
 const MAX_VALUE = 100;
@@ -32,7 +32,7 @@ function makeProgression($begin, $step, $lengthProgression)
 {
     $result = [];
     $firstElement = $begin;
-    for ($i = 1; $i <= $lengthProgression; $i++) {
+    for ($i = 0; $i <= $lengthProgression; $i++) {
         $result[] = $firstElement;
         $firstElement += $step;
     }

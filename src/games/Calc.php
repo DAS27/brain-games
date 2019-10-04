@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Game\runGame;
 
-const DESCRIPTION = 'What is the result of the expression?';
+const DESCRIPTION = 'What is the result of the expression?.';
 const OPERATORS = ['+', '-', '*'];
 const MIN = 0;
 const MAX = 100;
