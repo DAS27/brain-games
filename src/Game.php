@@ -2,8 +2,8 @@
 
 namespace BrainGames\Game;
 
-use function \cli\line;
-use function \cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 

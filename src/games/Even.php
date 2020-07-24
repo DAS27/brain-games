@@ -19,7 +19,7 @@ function run()
     runGame(DESCRIPTION, $generateData);
 }
 
-function isEven(int $num):bool
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
