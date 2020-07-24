@@ -1,6 +1,6 @@
 # different-caluculator
 
-![PHP CI](https://github.com/DAS27/difference-calculator/workflows/PHP%20CI/badge.svg)
+![PHP CI](https://github.com/DAS27/brain-games/workflows/PHP%20CI/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5420754223313dcb5b9d/maintainability)](https://codeclimate.com/github/DAS27/php-project-lvl1/maintainability)
 
 ### Installation
